@@ -1,8 +1,5 @@
-//
-// Created by vladik on 10.05.2021.
-//
-#include <math.h>
-#include <stdio.h>
+#include "header.h"
+
 
 double root(double* f, double* g, double* df, double* dg, double* ddf, double* ddg, double a, double b, double eps1){
     while (fabs(a - b) > 2 * eps1) {

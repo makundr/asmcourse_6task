@@ -24,6 +24,7 @@ f1:
 	fld qword[const1]
 	faddp
 
+	mov esp, ebp
  	pop ebp
  	ret
 
@@ -38,6 +39,7 @@ f2:
  	fld qword [const2]
  	fsubp
 
+ 	mov esp, ebp
  	pop ebp
  	ret
 
@@ -49,6 +51,7 @@ f3:
  	fld qword [ebp + 8]
  	fdivp
 
+ 	mov esp, ebp
  	pop ebp
  	ret
 
@@ -71,6 +74,7 @@ df1:
 
 	fchs
 
+	mov esp, ebp
  	pop ebp
  	ret
 
@@ -79,8 +83,9 @@ df2:
 	push ebp
  	mov ebp, esp
 
- 	fld [const2]
+ 	fld qword [const2]
 
+ 	mov esp, ebp
  	pop ebp
  	ret
 
@@ -94,6 +99,8 @@ df3:
  	fdivp
 
  	fchs
+
+ 	mov esp, ebp
  	pop ebp
  	ret
 
@@ -117,6 +124,7 @@ ddf1:
 
 	fchs
 
+ 	mov esp, ebp
  	pop ebp
  	ret
 
@@ -126,6 +134,7 @@ ddf2:
 
  	fldz
 
+ 	mov esp, ebp
  	pop ebp
  	ret
 
@@ -140,8 +149,10 @@ ddf3:
  	fdivp
  	fld qword [ebp + 8]
  	fdivp
- 	fld [const2]
+ 	fld qword [const2]
  	fmulp
  	fchs
+
+ 	mov esp, ebp
  	pop ebp
  	ret
