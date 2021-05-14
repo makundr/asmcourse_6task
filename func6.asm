@@ -4,6 +4,7 @@ section .data
 
 section .text
 
+global f1
 f1:
 	push ebp
  	mov ebp, esp
@@ -29,7 +30,7 @@ f1:
  	ret
 
 
-
+global f2
 f2:
 	push ebp
  	mov ebp, esp
@@ -44,6 +45,7 @@ f2:
  	ret
 
 
+global f3
 f3:
 	push ebp
  	mov ebp, esp
@@ -55,6 +57,8 @@ f3:
  	pop ebp
  	ret
 
+
+global df1
 df1:
 	push ebp
  	mov ebp, esp
@@ -79,6 +83,7 @@ df1:
  	ret
 
 
+global df2
 df2:
 	push ebp
  	mov ebp, esp
@@ -89,6 +94,8 @@ df2:
  	pop ebp
  	ret
 
+
+global df3
 df3:
 	push ebp
  	mov ebp, esp
@@ -105,6 +112,7 @@ df3:
  	ret
 
 
+global ddf1
 ddf1:
 	push ebp
  	mov ebp, esp
@@ -128,6 +136,8 @@ ddf1:
  	pop ebp
  	ret
 
+
+global ddf2
 ddf2:
 	push ebp
  	mov ebp, esp
@@ -139,6 +149,7 @@ ddf2:
  	ret
 
 
+global ddf3
 ddf3:
 	push ebp
  	mov ebp, esp

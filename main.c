@@ -8,6 +8,10 @@ int main(int argc, char** argv) {
             test_root();
         } else if (!strcmp(argv[i], "--test_integral")) {
             test_integral();
+        } else if (!strcmp(argv[i], "--count_iterations")) {
+            count_iterations();
+        } else if (!strcmp(argv[i], "--print_absciss")) {
+            print_absciss();
         }
     }
 
