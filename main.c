@@ -1,7 +1,11 @@
 #include "header.h"
 
 int main(int argc, char** argv) {
-    for (int i = 0; i < argc; ++i) {
+    if (argc == 1) {
+        print_res();
+    }
+    for (int i = 1; i < argc; ++i) {
+        printf("\t------------------------\n");
         if (!strcmp(argv[i], "--help")) {
             help();
         } else if (!strcmp(argv[i], "--test_root")) {

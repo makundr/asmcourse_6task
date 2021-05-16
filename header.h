@@ -10,6 +10,8 @@
 #include <stdlib.h>
 #include <math.h>
 
+extern int count;
+
 extern double f1(double);
 extern double f2(double);
 extern double f3(double);
@@ -24,6 +26,7 @@ extern void test_integral(void);
 extern void print_absciss(void);
 extern void count_iterations(void);
 extern void help(void);
+extern void print_res(void);
 extern double root(double (double), double (double), double (double), double (double), double (double), double (double), double, double, double);
 extern double integral(double (double), double, double, double);
 
