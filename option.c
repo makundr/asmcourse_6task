@@ -17,24 +17,19 @@ void help(void) {
 void print_res(void) {
     double min_x = 0.1;
     double max_x = 3;
-    double eps = 0.001;
+    double eps = 0.0001;
+    double eps_i = 0.001;
 
     double a = root(f1, f2, df1, df2, ddf1, ddf2, min_x, max_x, eps);
     double b = root(f1, f3, df1, df3, ddf1, ddf3, 0.2, 0.3, eps);
 
-//    printf("Точки перечечения с f1: %lf %lf\n", a, b);
-
-    double square = integral(f1, b, a, eps);
+    double square = integral(f1, b, a, eps_i);
 
     b = root(f2, f3, df2, df3, ddf2, ddf3, min_x, max_x, eps);
 
-//    printf("Точки перечечения с f2: %lf %lf\n", a, b);
-
-    square -= integral(f2, b, a, eps);
+    square -= integral(f2, b, a, eps_i);
 
     a = root(f1, f3, df1, df3, ddf1, ddf3, 0.2, 0.3, eps);
-
-//    printf("Точки перечечения с f3: %lf %lf\n", a, b);
 
     square -= integral(f3, a, b, eps);
 
@@ -76,10 +71,10 @@ void test_integral(void) {
     scanf("%lf", &eps);
     double square = 0;
     if (f == 1) {
-        square = integral(f1, b, a, eps);
+        square = integral(f1, a, b, eps);
     }
     if (f == 2) {
-        square = integral(f2, b, a, eps);
+        square = integral(f2, a, b, eps);
     }
     if (f == 3) {
         square = integral(f3, a, b, eps);
@@ -90,7 +85,7 @@ void test_integral(void) {
 void print_absciss(void) {
     double min_x = 0.1;
     double max_x = 3;
-    double eps = 0.001;
+    double eps = 0.0001;
 
     double a = root(f1, f2, df1, df2, ddf1, ddf2, min_x, max_x, eps);
     double b = root(f1, f3, df1, df3, ddf1, ddf3, 0.2, 0.3, eps);

@@ -10,14 +10,16 @@ CFLAGS = -Wall -Wextra -Werror -g -m32
 all: $(ASMOBJECTS) $(COBJECTS) MAIN
 
 %.o: %.c
-	echo "create c"
 	gcc $(CFLAGS) -c $< -o $@
 
 %.a: %.asm
-	echo "create asm"
 	nasm $(ASMFLAGS) $< -o $@
 
 
 MAIN:
 	gcc $(CFLAGS) -o main $(ASMOBJECTS) $(COBJECTS) -lm
+
+
+clean:
+	rm -f *.o *.a
 

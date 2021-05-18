@@ -12,6 +12,7 @@
 
 extern int count;
 
+
 extern double f1(double);
 extern double f2(double);
 extern double f3(double);
